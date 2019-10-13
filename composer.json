@@ -1,0 +1,19 @@
+{
+    "name": "nathabonfim59/1_calendario",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nathanael Bonfim",
+            "email": "nathabonfim59@localhost.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+
+    "autoload": {
+        "psr-4": {
+            "Source\\": "source/"
+        }
+    }
+}
