@@ -1,6 +1,6 @@
 <?php $this->component('header', array('title' => $this->title)); ?>
 
-<h1>About page</h1>
+<h1>Página Inicial</h1>
 
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis assumenda velit officiis sint laudantium! Natus consequuntur odio inventore ea expedita.</p>
 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus error atque sapiente eligendi incidunt! Recusandae, facilis sint similique rem tempora illo dolore temporibus commodi hic architecto dignissimos! Consequatur dolorem dolor, natus magnam magni et vero rerum ipsam quo quam non.</p>

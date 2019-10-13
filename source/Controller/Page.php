@@ -9,6 +9,7 @@ class Page
 
     private $realpath;
     private $title;
+    private $page_data;
 
     /**
      * Define o título e a localização da página.
@@ -18,8 +19,13 @@ class Page
      */
     public function __construct(string $title = '', string $path = '')
     {
-        $this->setTitle($title);
-        $this->setPath($path);
+        if ($title){
+            $this->setTitle($title);
+        }
+
+        if ($path) {
+            $this->setPath($path);
+        }
     }
 
     /**
@@ -63,10 +69,27 @@ class Page
         $valid_page = file_exists($this->realpath);
 
         if ($valid_page) {
+            $page_data = array();
+
+            if ($this->page_data) {
+                $page_data = $this->page_data;
+            }
+
             include_once($this->realpath);
         }
 
         return $valid_page;
+    }
+
+    /**
+     * Define um conjunto de dados que será enviado para a página
+     *
+     * @param array $page_data Dados da página
+     * @return void
+     */
+    public function setData(array $page_data): void
+    {
+        $this->page_data = $page_data;
     }
 
     /**

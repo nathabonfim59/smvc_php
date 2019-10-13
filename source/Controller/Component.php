@@ -21,6 +21,14 @@ class Component
             return "";
         }
 
+        $component_data = NULL;
+        
+        if ($data) {
+            $component_data = $data;
+        }
+
+        unset($data);
+
         $render_output = "";
         $render_output .= include_once($component_path);
 

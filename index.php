@@ -1,9 +1,12 @@
 <?php
 
-use Source\Controller\Page;
+use Source\Controller\Router;
 
 require_once __DIR__ . "/vendor/autoload.php";
 
-$page = new Page("About", "about");
+$router = new Router();
 
-$page->render();
+$router->createRoute('/about', 'about', 'Sobre');
+$router->createRoute('/home', 'home', "Página Inicial");
+
+$router->run();
